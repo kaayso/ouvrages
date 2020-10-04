@@ -1,0 +1,94 @@
+.navbar {
+  height: 84px;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 2em;
+  z-index: 2; }
+
+.navBar__logo {
+  height: 100%;
+  flex: 1; }
+  .navBar__logo img {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer; }
+
+.navBar__links-container button {
+  text-transform: capitalize;
+  margin: auto 15px;
+  font-weight: 700; }
+
+.navBar__links-container button,
+.navBar__links-container button:active,
+.navBar__links-container button:visited,
+.navBar__links-container button:link,
+.navBar__links-container button:focus {
+  background-color: transparent;
+  border: none;
+  color: #fff; }
+  .navBar__links-container button:hover,
+  .navBar__links-container button:active:hover,
+  .navBar__links-container button:visited:hover,
+  .navBar__links-container button:link:hover,
+  .navBar__links-container button:focus:hover {
+    background-color: transparent;
+    color: #2ca380;
+    transition: color 0.7s; }
+  .navBar__links-container button:hover::after,
+  .navBar__links-container button:active:hover::after,
+  .navBar__links-container button:visited:hover::after,
+  .navBar__links-container button:link:hover::after,
+  .navBar__links-container button:focus:hover::after {
+    animation: expand-line 0.35s ease-in-out forwards;
+    transition: all 0.5s; }
+
+.navBar__links-container button::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #2ca380;
+  bottom: 0;
+  left: 5%;
+  width: 0%; }
+
+.navBar__active-link {
+  background-color: transparent;
+  color: #2ca380 !important; }
+  .navBar__active-link::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #2ca380;
+    bottom: 0;
+    left: 5%;
+    width: 90% !important; }
+
+@keyframes expand-line {
+  from {
+    width: 0%; }
+  to {
+    width: 90%; } }
+
+@-webkit-keyframes expand-line {
+  from {
+    width: 0%; }
+  to {
+    width: 90%; } }
+
+@keyframes appear-from-top {
+  from {
+    transform: translateY(-120%); }
+  to {
+    transform: translateY(0%); } }
+
+@-webkit-keyframes appear-from-top {
+  from {
+    transform: translateY(-120%); }
+  to {
+    transform: translateY(0%); } }

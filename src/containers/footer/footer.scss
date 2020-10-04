@@ -1,0 +1,76 @@
+@import 'theme.scss';
+
+#footer {
+  width: 100%;
+  padding: 0 2em;
+  background-color: rgba(9, 40, 52, 1);
+}
+
+.footer__roadmap {
+  width: 80%;
+  font-size: 1em;
+  li {
+    list-style: none;
+    margin: 15px 0;
+  }
+  .footer__roadmap-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $primary-color;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.footer__roadmap-title {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.footer__logo {
+  height: 150px;
+  width: auto;
+  margin: 20px auto;
+}
+
+.footer__contact {
+  width: 80%;
+  font-size: 1em;
+  li {
+    list-style: none;
+    margin: 15px 0;
+    text-decoration: none;
+    color: $primary-color;
+    line-height: 1.8;
+    &:hover {
+      color: #fff;
+    }
+    a {
+      color: $primary-color;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.footer__icon {
+  font-size: 1.4em;
+  color: #fff;
+  margin: auto 5px;
+}
+
+.footer__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 575px) {
+  .footer__logo {
+    margin-left: 10%;
+  }
+}

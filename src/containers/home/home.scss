@@ -1,0 +1,96 @@
+@import 'theme.scss';
+
+#home {
+  min-height: 100vh;
+  position: relative;
+  background-color: #fff;
+}
+
+.home__header {
+  position: relative;
+  background: $base-gradient;
+  height: calc(100vh - 10px);
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background-image: url('../../assets/home-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home__left-part {
+  background-color: #fff;
+  height: 100%;
+  width: 50%;
+  transform: skewX(70deg);
+  transform-origin: center bottom;
+}
+
+.home__right-part {
+  background-color: #fff;
+  height: 100%;
+
+  width: 50%;
+  transform: skewX(-70deg);
+  transform-origin: center bottom;
+}
+
+.home__logo {
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 45vw;
+  max-height: 350px;
+  min-height: 250px;
+  width: auto;
+}
+
+.home__text {
+  position: absolute;
+  top: 70vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home__cta-btn {
+  position: absolute;
+  top: 95vh;
+  left: 50%;
+  color: #ffffff;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  animation: bounce 1s ease infinite alternate;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+
+.particles {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#services {
+  padding-top: 100px;
+  padding-bottom: 84px;
+  padding: 100px 10px 84px 10px;
+}

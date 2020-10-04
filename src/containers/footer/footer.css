@@ -1,0 +1,58 @@
+#footer {
+  width: 100%;
+  padding: 0 2em;
+  background-color: #092834; }
+
+.footer__roadmap {
+  width: 80%;
+  font-size: 1em; }
+  .footer__roadmap li {
+    list-style: none;
+    margin: 15px 0; }
+  .footer__roadmap .footer__roadmap-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2ca380; }
+    .footer__roadmap .footer__roadmap-link:hover {
+      color: #fff; }
+
+.footer__roadmap-title {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.footer__logo {
+  height: 150px;
+  width: auto;
+  margin: 20px auto; }
+
+.footer__contact {
+  width: 80%;
+  font-size: 1em; }
+  .footer__contact li {
+    list-style: none;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #2ca380;
+    line-height: 1.8; }
+    .footer__contact li:hover {
+      color: #fff; }
+    .footer__contact li a {
+      color: #2ca380; }
+      .footer__contact li a:hover {
+        color: #fff; }
+
+.footer__icon {
+  font-size: 1.4em;
+  color: #fff;
+  margin: auto 5px; }
+
+.footer__column {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@media only screen and (max-width: 575px) {
+  .footer__logo {
+    margin-left: 10%; } }

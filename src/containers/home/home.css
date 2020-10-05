@@ -68,6 +68,12 @@
   to {
     transform: translate(-50%, -100%); } }
 
+@-webkit-keyframes bounce {
+  from {
+    transform: translate(-50%, -50%); }
+  to {
+    transform: translate(-50%, -100%); } }
+
 .particles {
   position: absolute;
   display: block;

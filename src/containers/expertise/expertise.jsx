@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './expertise.css';
-import { Collapse, Table } from 'antd';
+import { Button, Collapse, Table } from 'antd';
 import ExpertiseItem from 'components/expertiseItem/expertiseItem';
 import WebApp from 'assets/web-app.svg';
 import Hosting from 'assets/hosting.svg';
@@ -192,7 +192,9 @@ export default function Expertise() {
           <ExpertiseItem activeColor="#efac78" number={2} active={currentIndex === 2} title="Applications mobile" selectElement={selectElement} image={MobApp} color="#fdf2ea" />
           <ExpertiseItem activeColor="#79efb4" number={3} active={currentIndex === 3} title="Solutions hébergement" selectElement={selectElement} image={Hosting} color="#ebfdf4" />
         </div>
-
+        <div className="expertise__link-container">
+          <Button className="g__link-btn" type="link"><a href="mailto:contact@ouvrages-web.fr">Devis gratuit</a></Button>
+        </div>
         <Collapse defaultActiveKey={['1']} ghost>
           {
              dico[currentIndex].content.map((section) => (

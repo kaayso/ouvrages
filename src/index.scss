@@ -1,0 +1,58 @@
+@import '~antd/dist/antd.css';
+@import 'theme.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.background {
+  position: absolute;
+
+  display: block;
+
+  top: 0;
+
+  left: 0;
+
+  z-index: 0;
+}
+
+.g-scroll {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.g__link-btn {
+  background-color: rgba($color: $primary-color, $alpha: 0.7);
+
+  a,
+  span {
+    color: #fff !important;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+
+    a,
+    span {
+      color: $primary-color !important;
+    }
+  }
+}

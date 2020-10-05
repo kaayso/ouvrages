@@ -23,3 +23,21 @@
     width: auto;
   }
 }
+
+@keyframes bounce-vertically {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@-webkit-keyframes bounce-vertically {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}

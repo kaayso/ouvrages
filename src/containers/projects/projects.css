@@ -1,4 +1,88 @@
+@charset "UTF-8";
 #projects {
   min-height: 100vh;
   position: relative;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.projects__category {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c0c0c3;
+  text-align: center; }
+
+.projects__title {
+  color: #082e22;
+  font-weight: 400;
+  font-size: 2em;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center; }
+
+.projects__content {
+  margin-top: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: center; }
+  .projects__content .ant-carousel {
+    max-width: 500px;
+    min-width: 300px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    cursor: pointer;
+    -webkit-box-shadow: 15px 15px 0px 0px rgba(44, 163, 127, 0.63);
+    -moz-box-shadow: 15px 15px 0px 0px rgba(44, 163, 127, 0.63);
+    box-shadow: 15px 15px 0px 0px rgba(44, 163, 127, 0.63); }
+    .projects__content .ant-carousel::before {
+      opacity: 0; }
+    .projects__content .ant-carousel:hover::before {
+      content: '🔗';
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      font-size: 1.5em;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+      opacity: 1; }
+
+.projects__client {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c0c0c3;
+  text-align: left; }
+
+.projects__title {
+  color: #082e22;
+  font-weight: 400;
+  font-size: 2em;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: left; }
+
+.projects__description {
+  text-align: justify;
+  height: auto;
+  max-width: 500px;
+  color: #8b8b92;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 50px;
+  margin-right: 20px; }
+
+@media only screen and (max-width: 425px) {
+  .projects__content {
+    width: 95%; }
+  .projects__description {
+    margin-right: 0; } }

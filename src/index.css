@@ -1,42 +1,39 @@
-@import '~antd/dist/antd.css';
-
+@import url(~antd/dist/antd.css);
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
 
 .background {
-
-  position:
-    absolute;
-
-  display:
-    block;
-
+  position: absolute;
+  display: block;
   top: 0;
-
   left: 0;
-
-  z-index: 0;
-}
+  z-index: 0; }
 
 .g-scroll {
   scroll-behavior: smooth;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
+  -webkit-overflow-scrolling: touch; }
+
+.g__link-btn {
+  background-color: rgba(44, 163, 128, 0.7); }
+  .g__link-btn a,
+  .g__link-btn span {
+    color: #fff !important; }
+  .g__link-btn:hover {
+    background-color: transparent;
+    border: 1px solid #2ca380; }
+    .g__link-btn:hover a,
+    .g__link-btn:hover span {
+      color: #2ca380 !important; }

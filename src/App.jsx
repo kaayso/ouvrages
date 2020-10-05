@@ -5,6 +5,7 @@ import Home from 'containers/home/home';
 import Footer from 'containers/footer/footer';
 import Projects from 'containers/projects/projects';
 import Expertise from 'containers/expertise/expertise';
+import Contact from 'containers/contact/contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <Expertise />
       <Projects />
+      <Contact />
       <Footer />
     </main>
   );

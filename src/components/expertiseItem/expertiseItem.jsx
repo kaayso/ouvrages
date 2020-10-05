@@ -8,9 +8,10 @@ export default function ExpertiseItem({
   const afterBorderColor = `${color} transparent transparent transparent`;
   const beforeBorderColor = `transparent transparent ${color} transparent`;
   const wrapperBorder = active ? `2px solid ${activeColor}` : '2px solid transparent';
+  const animation = active ? 'bounce-vertically 1s ease infinite alternate' : 'none';
 
   return (
-    <div onClick={() => selectElement(number)} aria-hidden="true" className="expertiseItem" style={{ border: wrapperBorder }}>
+    <div onClick={() => selectElement(number)} aria-hidden="true" className="expertiseItem" style={{ border: wrapperBorder, animation }}>
       <div className="expertiseItem__image-wrapper" style={{ backgroundColor: color }}>
         <div style={{
           borderTopColor: color,

@@ -18,3 +18,15 @@
   .expertiseItem__image-wrapper .expertiseItem__image {
     height: 32px;
     width: auto; }
+
+@keyframes bounce-vertically {
+  from {
+    transform: translateY(0%); }
+  to {
+    transform: translateY(-30%); } }
+
+@-webkit-keyframes bounce-vertically {
+  from {
+    transform: translateY(0%); }
+  to {
+    transform: translateY(-30%); } }

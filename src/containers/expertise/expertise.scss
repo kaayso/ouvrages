@@ -70,3 +70,13 @@
   justify-content: center;
   padding-bottom: 50px;
 }
+
+.expertise__link-container {
+  padding: 16px;
+}
+
+@media only screen and (max-width: 425px) {
+  .expertise__content {
+    width: 95%;
+  }
+}

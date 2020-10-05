@@ -3,6 +3,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { StateProvider } from 'contextAPI/stateProvider';
+import reducer, { initialState } from 'contextAPI/reducer';
 import App from './App';
 import Particles from '../node_modules/particlesjs/dist/particles';
 
@@ -20,6 +22,8 @@ try {
 }
 
 ReactDOM.render(
-  <App />,
+  <StateProvider initialState={initialState} reducer={reducer}>
+    <App />
+  </StateProvider>,
   document.getElementById('root'),
 );

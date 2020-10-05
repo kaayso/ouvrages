@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './expertise.css';
 import { Button, Collapse, Table } from 'antd';
 import ExpertiseItem from 'components/expertiseItem/expertiseItem';
@@ -6,9 +6,11 @@ import WebApp from 'assets/web-app.svg';
 import Hosting from 'assets/hosting.svg';
 import MobApp from 'assets/mob-app.svg';
 import Ruby from 'assets/ruby.svg';
+import { useStateValue } from 'contextAPI/stateProvider';
 
 export default function Expertise() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [{ serviceIndex }, dispatch] = useStateValue();
+
   const { Panel } = Collapse;
   const dico = [
     {
@@ -177,7 +179,10 @@ export default function Expertise() {
     },
   ];
   const selectElement = (idx) => {
-    setCurrentIndex(idx);
+    dispatch({
+      type: 'SET_SERVICE_INDEX',
+      serviceIndex: idx,
+    });
   };
   return (
     <section id="expertise">
@@ -187,17 +192,17 @@ export default function Expertise() {
       </h3>
       <div className="expertise__content">
         <div className="expertise__controllers">
-          <ExpertiseItem activeColor="#29bae4" number={0} active={currentIndex === 0} title="Logiciels - applications web" selectElement={selectElement} image={WebApp} color="#def4fb" />
-          <ExpertiseItem activeColor="#ee76ad" number={1} active={currentIndex === 1} title="Développement ruby on rails" selectElement={selectElement} image={Ruby} color="#fce7f1" />
-          <ExpertiseItem activeColor="#efac78" number={2} active={currentIndex === 2} title="Applications mobile" selectElement={selectElement} image={MobApp} color="#fdf2ea" />
-          <ExpertiseItem activeColor="#79efb4" number={3} active={currentIndex === 3} title="Solutions hébergement" selectElement={selectElement} image={Hosting} color="#ebfdf4" />
+          <ExpertiseItem activeColor="#29bae4" number={0} active={serviceIndex === 0} title="Logiciels - applications web" selectElement={selectElement} image={WebApp} color="#def4fb" />
+          <ExpertiseItem activeColor="#ee76ad" number={1} active={serviceIndex === 1} title="Développement ruby on rails" selectElement={selectElement} image={Ruby} color="#fce7f1" />
+          <ExpertiseItem activeColor="#efac78" number={2} active={serviceIndex === 2} title="Applications mobile" selectElement={selectElement} image={MobApp} color="#fdf2ea" />
+          <ExpertiseItem activeColor="#79efb4" number={3} active={serviceIndex === 3} title="Solutions hébergement" selectElement={selectElement} image={Hosting} color="#ebfdf4" />
         </div>
         <div className="expertise__link-container">
           <Button className="g__link-btn" type="link"><a href="mailto:contact@ouvrages-web.fr">Devis gratuit</a></Button>
         </div>
         <Collapse defaultActiveKey={['1']} ghost>
           {
-             dico[currentIndex].content.map((section) => (
+             dico[serviceIndex].content.map((section) => (
                <Panel className="expertise__panel" header={section.title} key={section.key}>
                  {
                    section.table && (

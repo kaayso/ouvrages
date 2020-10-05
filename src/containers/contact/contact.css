@@ -43,3 +43,10 @@
   -moz-box-shadow: 0px 13px 22px -2px #d1d1d1;
   box-shadow: 0px 13px 22px -2px #d1d1d1;
   margin-bottom: 50px; }
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+  outline-color: #2ca380 !important;
+  border-color: #2ca380 !important; }

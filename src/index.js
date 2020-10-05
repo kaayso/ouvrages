@@ -6,18 +6,20 @@ import './index.css';
 import App from './App';
 import Particles from '../node_modules/particlesjs/dist/particles';
 
-window.onload = () => {
-  Particles.init({
-    selector: '.particles',
-    connectParticles: true,
-    color: '#edf0da',
-    maxParticles: 50,
-  });
-};
+try {
+  window.onload = () => {
+    Particles.init({
+      selector: '.particles',
+      connectParticles: true,
+      color: '#edf0da',
+      maxParticles: 50,
+    });
+  };
+} catch (error) {
+  console.error(error);
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root'),
 );

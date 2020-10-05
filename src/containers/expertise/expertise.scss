@@ -1,0 +1,72 @@
+@import 'theme.scss';
+
+#expertise {
+  min-height: 100vh;
+  position: relative;
+  background-color: #f8faff;
+  font-family: 'Work Sans', sans-serif;
+  padding-top: 100px;
+}
+
+.expertise__category {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c0c0c3;
+  text-align: center;
+}
+.expertise__title {
+  color: $secondary-color;
+  font-weight: 400;
+  font-size: 2em;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.expertise__content {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  min-width: 300px;
+  padding-bottom: 100px;
+  flex-direction: column;
+}
+
+.expertise__panel {
+  .ant-collapse-header {
+    color: #082e22;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  p {
+    color: #8b8b92;
+    text-align: justify;
+    font-size: 16px;
+  }
+}
+
+.expertise__pricing-table {
+  padding-bottom: 50px;
+  max-width: 500px;
+  th,
+  td,
+  tr  {
+    font-size: 12px;
+    padding: 16px 8px !important;
+  }
+  th {
+    font-weight: 900 !important;
+  }
+  ul {
+    display: none;
+  }
+}
+
+.expertise__controllers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 50px;
+}

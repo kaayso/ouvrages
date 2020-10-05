@@ -12,14 +12,15 @@ export default function Footer() {
 
           <ul className="footer__roadmap">
             <li className="footer__roadmap-title">Plan du site</li>
-            <li><a href="/" className="footer__roadmap-link">accueil</a></li>
-            <li><a href="/savoir-faire" className="footer__roadmap-link">savoir-faire</a></li>
-            <li><a href="/realisations" className="footer__roadmap-link">réalisation</a></li>
-            <li><a href="/contact" className="footer__roadmap-link">contact</a></li>
+            <li><a href="#home" className="footer__roadmap-link">accueil</a></li>
+            <li><a href="#expertise" className="footer__roadmap-link">savoir-faire</a></li>
+            <li><a href="#projects" className="footer__roadmap-link">réalisation</a></li>
+            <li><a href="#contact" className="footer__roadmap-link">contact</a></li>
           </ul>
         </Col>
         <Col xs={24} sm={12} md={8} lg={8} xl={8} className="footer__column">
           <ul className="footer__contact">
+            <li className="footer__roadmap-title">Vous avez une question?</li>
             <li>
               <HomeOutlined className="footer__icon" />
               45 rue Sainte Claire

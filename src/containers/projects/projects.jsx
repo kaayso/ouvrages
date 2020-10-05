@@ -10,6 +10,7 @@ import Masalchi3 from 'assets/Masalchi3.png';
 import Masalchi4 from 'assets/Masalchi4.png';
 import Mysofie1 from 'assets/mysofie1.png';
 import Mysofie2 from 'assets/mysofie2.png';
+import { Fade } from 'react-awesome-reveal';
 
 export default function Projects() {
   const dico = [
@@ -43,13 +44,13 @@ export default function Projects() {
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <Carousel autoplay>
                     {
-                      item.images.map((img, i) => <img key={i} src={img} alt="" />)
+                      item.images.map((img, i) => <Fade><img key={i} src={img} alt="" /></Fade>)
                     }
                   </Carousel>
                 </a>
               </Col>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                <div className="projects__description">
+                <Fade className="projects__description">
                   <h3 className="projects__client">{ item.client}</h3>
                   <h3 className="projects__title">
                     { item.title}
@@ -58,7 +59,7 @@ export default function Projects() {
                     { item.description}
                   </p>
                   <Button className="g__link-btn" type="link"><a href={item.link} target="_blank" rel="noopener noreferrer">Démo</a></Button>
-                </div>
+                </Fade>
               </Col>
             </Row>
           ))

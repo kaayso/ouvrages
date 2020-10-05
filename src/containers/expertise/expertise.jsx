@@ -7,6 +7,9 @@ import Hosting from 'assets/hosting.svg';
 import MobApp from 'assets/mob-app.svg';
 import Ruby from 'assets/ruby.svg';
 import { useStateValue } from 'contextAPI/stateProvider';
+import {
+  Fade,
+} from 'react-awesome-reveal';
 
 export default function Expertise() {
   const [{ serviceIndex }, dispatch] = useStateValue();
@@ -192,16 +195,20 @@ export default function Expertise() {
       </h3>
       <div className="expertise__content">
         <div className="expertise__controllers">
-          <ExpertiseItem activeColor="#29bae4" number={0} active={serviceIndex === 0} title="Logiciels - applications web" selectElement={selectElement} image={WebApp} color="#def4fb" />
-          <ExpertiseItem activeColor="#ee76ad" number={1} active={serviceIndex === 1} title="Développement ruby on rails" selectElement={selectElement} image={Ruby} color="#fce7f1" />
-          <ExpertiseItem activeColor="#efac78" number={2} active={serviceIndex === 2} title="Applications mobile" selectElement={selectElement} image={MobApp} color="#fdf2ea" />
-          <ExpertiseItem activeColor="#79efb4" number={3} active={serviceIndex === 3} title="Solutions hébergement" selectElement={selectElement} image={Hosting} color="#ebfdf4" />
+          <Fade cascade damping={0.3}>
+            <ExpertiseItem activeColor="#29bae4" number={0} active={serviceIndex === 0} title="Logiciels - applications web" selectElement={selectElement} image={WebApp} color="#def4fb" />
+            <ExpertiseItem activeColor="#ee76ad" number={1} active={serviceIndex === 1} title="Développement ruby on rails" selectElement={selectElement} image={Ruby} color="#fce7f1" />
+            <ExpertiseItem activeColor="#efac78" number={2} active={serviceIndex === 2} title="Applications mobile" selectElement={selectElement} image={MobApp} color="#fdf2ea" />
+            <ExpertiseItem activeColor="#79efb4" number={3} active={serviceIndex === 3} title="Solutions hébergement" selectElement={selectElement} image={Hosting} color="#ebfdf4" />
+          </Fade>
         </div>
+
         <div className="expertise__link-container">
           <Button className="g__link-btn" type="link"><a href="mailto:contact@ouvrages-web.fr">Devis gratuit</a></Button>
         </div>
-        <Collapse defaultActiveKey={['1']} ghost>
-          {
+        <Fade>
+          <Collapse defaultActiveKey={['1']} ghost>
+            {
              dico[serviceIndex].content.map((section) => (
                <Panel className="expertise__panel" header={section.title} key={section.key}>
                  {
@@ -213,7 +220,8 @@ export default function Expertise() {
                </Panel>
              ))
           }
-        </Collapse>
+          </Collapse>
+        </Fade>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import Avatar3 from 'assets/avatar3.jpg';
 import {
   Form, Input, Button,
 } from 'antd';
+import { Fade } from 'react-awesome-reveal';
 
 export default function Contact() {
   const layout = {
@@ -24,9 +25,11 @@ export default function Contact() {
       </h3>
       <div className="contact__content">
         <div className="contact__cards-container">
-          <ContactCard image={Avatar1} name="Vincent Chabredier" status="Chef de projet / Développeur Full Stack" tel="06 75 88 04 29" email="vincent@ouvrages-web.fr" />
-          <ContactCard image={Avatar2} name="Michaël Witrant" status="Directeur technique / Admin Sys / Dév Full Stack" tel="06 00 00 00 00" email="michael@ouvrages-web.fr" />
-          <ContactCard image={Avatar3} name="Florent Ferry" status="Développeur Full Stack" tel="06 00 00 00 00" email="florent@ouvrages-web.fr" />
+          <Fade cascade damping={0.1}>
+            <ContactCard image={Avatar1} name="Vincent Chabredier" status="Chef de projet / Développeur Full Stack" tel="06 75 88 04 29" email="vincent@ouvrages-web.fr" />
+            <ContactCard image={Avatar2} name="Michaël Witrant" status="Directeur technique / Admin Sys / Dév Full Stack" tel="06 00 00 00 00" email="michael@ouvrages-web.fr" />
+            <ContactCard image={Avatar3} name="Florent Ferry" status="Développeur Full Stack" tel="06 00 00 00 00" email="florent@ouvrages-web.fr" />
+          </Fade>
         </div>
         <Form
           className="contact__form"

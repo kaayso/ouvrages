@@ -36,6 +36,7 @@ export default function ServiceItem({
           <Button onClick={setServiceIndex} className="serviceItem__link-btn" type="link"><a href={link}>En savoir plus</a></Button>
         </div>
       </Col>
+
       <Col xs={24} sm={24} md={24} lg={10} xl={10} className={`serviceItem__column ${reverse ? 'serviceItem__column--left' : 'serviceItem__column--right'}`}>
         <img src={image} style={{ transform: `translateY(-${translateValue}px)` }} className={`serviceItem__image ${greenShadow ? 'green-shadow' : 'blue-shadow'} ${reverse ? 'ml-xs' : ''}`} alt="" />
       </Col>

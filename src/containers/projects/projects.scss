@@ -97,6 +97,11 @@
     width: 95%;
   }
   .projects__description {
+    margin-right: 0;
+  }
+  .projects__content {
+    .ant-carousel {
       margin-right: 0;
+    }
   }
 }

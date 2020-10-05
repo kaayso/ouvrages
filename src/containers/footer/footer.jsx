@@ -14,7 +14,7 @@ export default function Footer() {
             <li className="footer__roadmap-title">Plan du site</li>
             <li><a href="#home" className="footer__roadmap-link">accueil</a></li>
             <li><a href="#expertise" className="footer__roadmap-link">savoir-faire</a></li>
-            <li><a href="#projects" className="footer__roadmap-link">réalisation</a></li>
+            <li><a href="#projects" className="footer__roadmap-link">réalisations</a></li>
             <li><a href="#contact" className="footer__roadmap-link">contact</a></li>
           </ul>
         </Col>

@@ -39,14 +39,13 @@
   .navBar__links-container button:focus:hover a {
     background-color: transparent;
     color: #2ca380 !important;
-    transition: color 0.5s; }
+    transition: color 0.3s; }
   .navBar__links-container button:hover::after,
   .navBar__links-container button:active:hover::after,
   .navBar__links-container button:visited:hover::after,
   .navBar__links-container button:link:hover::after,
   .navBar__links-container button:focus:hover::after {
-    animation: expand-line 0.35s ease-in-out forwards;
-    transition: all 0.5s; }
+    animation: expand-line 0.35s ease-in-out forwards; }
 
 .navBar__links-container button::after {
   content: '';
@@ -67,7 +66,8 @@
     background-color: #2ca380;
     bottom: 0;
     left: 5%;
-    width: 90% !important; }
+    width: 90% !important;
+    transition: all 0.7s; }
 
 @keyframes expand-line {
   from {

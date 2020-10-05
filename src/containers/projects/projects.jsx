@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import './projects.css';
 import {
@@ -37,12 +38,12 @@ export default function Projects() {
       <>
         {
           dico.map((item) => (
-            <Row className="projects__content" style={{ flexDirection: item.reverse ? 'row-reverse' : 'row' }}>
+            <Row key={item.title} className="projects__content" style={{ flexDirection: item.reverse ? 'row-reverse' : 'row' }}>
               <Col xs={24} sm={24} md={24} lg={12} xl={12}>
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <Carousel autoplay>
                     {
-                      item.images.map((img) => <img src={img} alt="" />)
+                      item.images.map((img, i) => <img key={i} src={img} alt="" />)
                     }
                   </Carousel>
                 </a>

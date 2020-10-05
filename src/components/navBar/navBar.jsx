@@ -1,12 +1,12 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import { Button, Drawer } from 'antd';
 import './navBar.css';
 import Logo from 'assets/logo-header.svg';
 import { MenuOutlined } from '@ant-design/icons';
 
-export default function NavBar() {
+export default function NavBar({ activeButton }) {
   const [style, setStyle] = useState(null);
-  const [activeButton, setActiveButton] = useState(0);
   const [drawerVisible, setDrawerVisibility] = useState(false);
 
   const showDrawer = () => {
@@ -38,10 +38,6 @@ export default function NavBar() {
     return window.addEventListener('scroll', handleScroll);
   }, []);
 
-  const setIndex = (idx) => {
-    setActiveButton(idx);
-  };
-
   return (
     <header>
       <nav className="navbar" style={style}>
@@ -49,10 +45,10 @@ export default function NavBar() {
           <img src={Logo} alt="logo" />
         </a>
         <div className="navBar__links-container navBar__links-container--desktop">
-          <Button onClick={() => setIndex(0)} className={activeButton === 0 ? 'navBar__active-link' : ''} type="text"><a href="#home">accueil</a></Button>
-          <Button onClick={() => setIndex(1)} className={activeButton === 1 ? 'navBar__active-link' : ''} type="text"><a href="#expertise">savoir-faire</a></Button>
-          <Button onClick={() => setIndex(2)} className={activeButton === 2 ? 'navBar__active-link' : ''} type="text"><a href="#projects">réalisation</a></Button>
-          <Button onClick={() => setIndex(3)} className={activeButton === 3 ? 'navBar__active-link' : ''} type="text"><a href="#contact">contact</a></Button>
+          <Button className={activeButton === 0 ? 'navBar__active-link' : ''} type="text"><a href="#home">accueil</a></Button>
+          <Button className={activeButton === 1 ? 'navBar__active-link' : ''} type="text"><a href="#expertise">savoir-faire</a></Button>
+          <Button className={activeButton === 2 ? 'navBar__active-link' : ''} type="text"><a href="#projects">réalisations</a></Button>
+          <Button className={activeButton === 3 ? 'navBar__active-link' : ''} type="text"><a href="#contact">contact</a></Button>
         </div>
         <div className="navBar__links-container--mobile">
           <Button onClick={showDrawer}><MenuOutlined /></Button>
@@ -67,7 +63,7 @@ export default function NavBar() {
       >
         <Button onClick={onClose} type="text"><a href="#home">accueil</a></Button>
         <Button onClick={onClose} type="text"><a href="#expertise">savoir-faire</a></Button>
-        <Button onClick={onClose} type="text"><a href="#projects">réalisation</a></Button>
+        <Button onClick={onClose} type="text"><a href="#projects">réalisations</a></Button>
         <Button onClick={onClose} type="text"><a href="#contact">contact</a></Button>
       </Drawer>
     </header>

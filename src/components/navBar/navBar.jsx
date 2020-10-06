@@ -5,6 +5,16 @@ import './navBar.css';
 import Logo from 'assets/logo-header.svg';
 import { MenuOutlined } from '@ant-design/icons';
 
+const navBarStyle = {
+  position: 'fixed',
+  background: 'rgba(9, 40, 52, 1)',
+  opacity: '0',
+  transition: 'all .7s',
+  transform: 'transitionY(-120%)',
+  boxShadow: '0px 4px 25px -4px rgba(0,0,0,0.75)',
+  animation: 'appear-from-top .4s ease-in-out forwards',
+};
+
 export default function NavBar({ activeButton }) {
   const [style, setStyle] = useState(null);
   const [drawerVisible, setDrawerVisibility] = useState(false);
@@ -15,26 +25,18 @@ export default function NavBar({ activeButton }) {
   const onClose = () => {
     setDrawerVisibility(false);
   };
+
   const handleScroll = () => {
     const newStyle = window.pageYOffset > 350;
-    const navBarStyle = {
-      position: 'fixed',
-      background: 'rgba(9, 40, 52, 1)',
-      opacity: '0',
-      transition: 'all .7s',
-      transform: 'transitionY(-120%)',
-      boxShadow: '0px 4px 25px -4px rgba(0,0,0,0.75)',
-      animation: 'appear-from-top .4s ease-in-out forwards',
-    };
     if (newStyle) {
       setStyle(navBarStyle);
     } else {
       setStyle(null);
     }
   };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-
     return window.addEventListener('scroll', handleScroll);
   }, []);
 

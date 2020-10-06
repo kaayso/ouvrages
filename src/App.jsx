@@ -18,6 +18,7 @@ function App() {
     const stepOne = homeHeight;
     const stepTwo = stepOne + expertiseHeight;
     const stepThree = stepTwo + projectsHeight;
+
     if (window.pageYOffset < (stepOne - OFFSET)) {
       setActiveButton(0);
     } else if (window.pageYOffset > (stepOne - OFFSET)

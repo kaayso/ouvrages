@@ -14,7 +14,8 @@ export default function ServiceItem({
 }) {
   const [{ serviceIndex }, dispatch] = useStateValue();
   const screens = useBreakpoint();
-  const translateValue = !screens.lg ? 0 : translateY / coef;
+  const translateValue = screens.lg ? translateY / coef : 0;
+
   const setServiceIndex = () => {
     dispatch({
       type: 'SET_SERVICE_INDEX',

@@ -6,6 +6,7 @@
   background-color: #f8faff;
   font-family: 'Work Sans', sans-serif;
   padding-top: 100px;
+  overflow-x: hidden;
 }
 
 .contact__category {
@@ -57,4 +58,10 @@ textarea:focus,
 textarea:hover {
   outline-color: $primary-color !important;
   border-color: $primary-color !important;
+}
+
+@media only screen and (max-width: 505px) {
+  .contact__form {
+    width: 95%;
+  }
 }
